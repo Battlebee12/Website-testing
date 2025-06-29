@@ -32,21 +32,80 @@ The suite targets real issues that could impact usability, compliance, and user 
 
 ---
 
-## 🚨 Sample Issues Detected
+## 🚨Detailed analysis of Issues 
 
-```html
-<!-- ❌ Missing accessible name -->
-<a class="featured-link" href="https://www.orchestry.com/resources/orchestry-features-sheet/?hsLang=en"></a>
+Running 13 tests using 1 worker
 
-<!-- ❌ Missing alt text -->
+  ✘  1 tests\assesibility.spec.ts:13:5 › Buttons and links should have accessible names (6.5s)     
+
+🔎 Running Accessibility Tests...
+
+
+🔍 Checking accessible names on buttons and links...
+
+❌ [Accessibility] Element missing accessible name:
+<a class="featured-link" href="https://www.orchestry.com/resources/orchestry-features-sheet/?hsLang  ✘  2 tests\assesibility.spec.ts:33:5 › All images should have non-empty alt text (2.8s)
+     2 tests\assesibility.spec.ts:33:5 › All images should have non-empty alt text
+
+🔎 Running Accessibility Tests...
+
+
+🔍 Checking <img> alt text...
+
+🖼️ [Accessibility] Image missing alt text:
 <img src="https://www.orchestry.com/hubfs/Logo%20-%20Teck-min.png" alt="" class="logo">
+  ✓  3 tests\assesibility.spec.ts:53:5 › All interactive elements should be focusable (4.5s)       
 
-<!-- ❌ Empty heading -->
+🔎 Running Accessibility Tests...
+
+
+🔍 Checking focusability of interactive elements...
+
+  ✘  4 tests\assesibility.spec.ts:75:5 › No empty headings (h1-h6) (2.0s)
+
+🔍 Checking for empty heading tags...
+
+⚠️ [Accessibility] Empty heading tag found:
 <h1></h1>
+  ✓  5 tests\assesibility.spec.ts:95:5 › Page should have a skip link for accessibility (2.7s)     
 
-<!-- ❌ Broken link (404) -->
-https://www.orchestry.com/guide/microsoft-365-copilot-guide-for-executives?hsLang=en
-```
+🔎 Running Accessibility Tests...
+
+
+🔍 Checking for skip link...
+
+  ✓  6 tests\dom-health.spec.ts:11:5 › Page should not have excessive DOM size (1.8s)              
+
+🔎 Running Dom-health Tests...
+
+🌐 DOM Element Count: 1150
+  ✘  7 tests\dom-health.spec.ts:19:5 › Page should not have excessive CSS rules (1.8s)
+📏 CSS Rules Count: 6088
+  ✓  8 tests\dom-health.spec.ts:36:5 › Page should not have excessive inline styles (2.6s)         
+
+🔎 Running Dom-health Tests...
+
+📐 Inline Styles Count: 98
+  ✘  9 tests\links.spec.ts:10:5 › All internal links return 200 (7.8s)
+
+🔎 Running Link Tests...
+
+  ✘  10 …edia-size.spec.ts:10:5 › All <img> elements should have width and height attributes (2.8s)
+
+🔎 Running Media-size Tests...
+
+🖼️ Missing width/height on:
+ <img class="hero-image" src="https://www.orchestry.com/hubfs/Orchestry%20-%20Hero%20Platform%20001.svg" width="600" alt="Orchestry - Hero Platform 001">
+  ✓  11 tests\media-size.spec.ts:28:5 › No individual asset should be too large (3.3s)
+
+🔎 Running Media-size Tests...
+
+  ✓  12 tests\orchestry-home.spec.ts:11:5 › Orchestry homepage should load and have title (1.9s)   
+
+🔎 Running home Tests...
+
+  ✓  13 tests\orchestry-home.spec.ts:24:5 › Page should not have excessive JavaScript errors (6.8s)
+📉 JavaScript Errors: 0
 
 ---
 
