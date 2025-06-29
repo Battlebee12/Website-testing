@@ -143,12 +143,6 @@ tests/
 ├── orchestry-home.spec.ts     # Sanity checks, JS errors, page load
 ```
 
----
-
-## 💬 Next Steps (Optional)
-- Integrate this suite into a GitHub Action or CI pipeline
-- Add visual regression or Lighthouse score monitoring
-- Add axe-core for WCAG 2.1 audit depth
 
 ---
 
