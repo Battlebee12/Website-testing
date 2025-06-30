@@ -11,7 +11,7 @@ test.beforeAll(async () => {
 // 1. Accessible Names Test
 
 test('Buttons and links should have accessible names', async ({ page }) => {
-  console.log(chalk.default.blue('\n🔍 Checking accessible names on buttons and links...\n'));
+ // console.log(chalk.default.blue('\n🔍 Checking accessible names on buttons and links...\n'));
   await page.goto('https://www.orchestry.com/');
 
   const buttons = await page.$$('[role=button], button, a');
@@ -31,7 +31,7 @@ test('Buttons and links should have accessible names', async ({ page }) => {
 // 2. Image Alt Text Test
 
 test('All images should have non-empty alt text', async ({ page }) => {
-  console.log(chalk.default.blue('\n🔍 Checking <img> alt text...\n'));
+ // console.log(chalk.default.blue('\n🔍 Checking <img> alt text...\n'));
   await page.goto('https://www.orchestry.com/');
   const imgs = await page.$$('img');
 
@@ -51,7 +51,7 @@ test('All images should have non-empty alt text', async ({ page }) => {
 // 3. Focusable Elements Test
 
 test('All interactive elements should be focusable', async ({ page }) => {
-  console.log(chalk.default.blue('\n🔍 Checking focusability of interactive elements...\n'));
+ // console.log(chalk.default.blue('\n🔍 Checking focusability of interactive elements...\n'));
   await page.goto('https://www.orchestry.com/');
   const focusable = await page.$$('button, a[href], input, textarea, select, [tabindex]');
 
@@ -73,7 +73,7 @@ test('All interactive elements should be focusable', async ({ page }) => {
 // 4. Empty Heading Tags Test
 
 test('No empty headings (h1-h6)', async ({ page }) => {
-  console.log(chalk.default.blue('\n🔍 Checking for empty heading tags...\n'));
+ // console.log(chalk.default.blue('\n🔍 Checking for empty heading tags...\n'));
   await page.goto('https://www.orchestry.com/');
   const headings = await page.$$('h1, h2, h3, h4, h5, h6');
 
@@ -93,7 +93,7 @@ test('No empty headings (h1-h6)', async ({ page }) => {
 // 5. Skip Link Test
 
 test('Page should have a skip link for accessibility', async ({ page }) => {
-  console.log(chalk.default.blue('\n🔍 Checking for skip link...\n'));
+  //console.log(chalk.default.blue('\n🔍 Checking for skip link...\n'));
   await page.goto('https://www.orchestry.com/');
   const skipLink = await page.$('a[href^="#"], a.skip-link');
   const isVisible = skipLink && await skipLink.isVisible();
